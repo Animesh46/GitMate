@@ -1,0 +1,29 @@
+  {
+  "project_info": {
+    "project_number": "357084039059",
+    "project_id": "gitmate-c2d09",
+    "storage_bucket": "gitmate-c2d09.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:357084039059:android:27470f357907274b530a66",
+        "android_client_info": {
+          "package_name": "com.animesh.gitmate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_9bRmuMsPe5YkLhrMjeIZkmtVsMqTsVo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
