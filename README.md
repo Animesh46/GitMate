@@ -34,10 +34,11 @@ GitMate is an Android app that lets you search for GitHub users, view their prof
 
 
 ## Demo Video
-[Link to your video or GIF]
+<img width="1080" height="2400" alt="GitMateDemo" src="https://github.com/user-attachments/assets/334b1a69-c69d-4ce0-9686-9a3bc23d365c" />
+
 
 ## APK
-Download the APK from the [Releases](https://github.com/yourusername/GitMate/releases) section.
+Download the APK from the [Releases](https://github.com/Animesh46/GitMate/releases) section.
 
 ## What I Learned
 - How to integrate Firebase Authentication
