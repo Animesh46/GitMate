@@ -49,13 +49,17 @@ GitMate is a modern Android app that lets you browse GitHub repositories and **u
 
 | Login | Home / Search | File Browser | AI Explainer |
 |-------|---------------|--------------|--------------|
-| ![Login](login.jpg) | ![Home](home.jpg) | ![Browser](browser.jpg) | ![Explainer](explainer.jpg) |
+| ![Login](<img width="300"  alt="image" src="https://github.com/user-attachments/assets/124c55df-3cd0-4bb1-97ff-891cc8b4714e" />
+) | ![Home](<img width="300" alt="image" src="https://github.com/user-attachments/assets/ef53b931-934e-45f6-868e-fdb11d981cf7" />
+) | ![Browser](<img width="300" alt="image" src="https://github.com/user-attachments/assets/86270fea-fa0c-487d-9032-eb7449cb7324" />
+) | ![Explainer](<img width="300" alt="image" src="https://github.com/user-attachments/assets/658f8d32-9fae-43a1-8522-f0ba00f95fbe" />
+) |
 
-*Replace the filenames (login.jpg, home.jpg, etc.) with your actual screenshot filenames.*
 
 ## Demo Video
 
-Watch the demo: [GitMate Demo](GitMateDemo.gif)
+Watch the demo: [GitMate Demo](<img width="320" height="569" alt="projectVidgif" src="https://github.com/user-attachments/assets/226c5e6c-2e5a-42af-9594-d01720cb171c" />
+)
 
 
 ## Download APK
