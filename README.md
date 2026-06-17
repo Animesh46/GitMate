@@ -58,7 +58,7 @@ GitMate is a modern Android app that lets you browse GitHub repositories and **u
 
 ## Demo Video
 
-Watch the demo: ![GitMate Demo](<img width="320" height="569" alt="projectVidgif" src="https://github.com/user-attachments/assets/226c5e6c-2e5a-42af-9594-d01720cb171c" />
+Watch the demo: (<img width="320" height="569" alt="projectVidgif" src="https://github.com/user-attachments/assets/226c5e6c-2e5a-42af-9594-d01720cb171c" />
 )
 
 
