@@ -16,6 +16,9 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        //val apiKey: String = project.properties["DEEPSEEK_API_KEY"] as? String ?: ""
+        val nvidiaApiKey = "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"
+        buildConfigField("String", "NVIDIA_API_KEY", "\"$nvidiaApiKey\"")
     }
 
     buildTypes {
@@ -33,6 +36,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true  // <-- ADD THIS LINE
     }
 }
 
@@ -58,7 +62,9 @@ dependencies {
     //
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("androidx.navigation:navigation-compose:2.7.7")
+
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.google.code.gson:gson:2.10.1")
 }
 kotlin {
     jvmToolchain(17)

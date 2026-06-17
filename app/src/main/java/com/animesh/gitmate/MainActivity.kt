@@ -17,6 +17,8 @@ import com.animesh.gitmate.ui.auth.LoginScreen
 import com.animesh.gitmate.ui.detail.DetailScreen
 import com.animesh.gitmate.ui.home.HomeScreen
 import com.animesh.gitmate.ui.theme.GitMateTheme
+import com.animesh.gitmate.ui.browser.RepoFileBrowserScreen
+import com.animesh.gitmate.ui.explainer.FileExplainerScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,6 +60,49 @@ class MainActivity : ComponentActivity() {
                             val username = backStackEntry.arguments?.getString("username") ?: ""
                             DetailScreen(
                                 username = username,
+                                onRepoClick = { repoName ->
+                                    navController.navigate("browser/$username/$repoName")
+                                },
+                                onBack = { navController.popBackStack() }
+                            )
+                        }
+                        composable(
+                            "browser/{owner}/{repo}",
+                            arguments = listOf(
+                                navArgument("owner") { type = NavType.StringType },
+                                navArgument("repo") { type = NavType.StringType }
+                            )
+                        ) { backStackEntry ->
+                            val owner = backStackEntry.arguments?.getString("owner") ?: ""
+                            val repo = backStackEntry.arguments?.getString("repo") ?: ""
+                            RepoFileBrowserScreen(
+                                owner = owner,
+                                repo = repo,
+                                onFileClick = { filePath ->
+                                    // Navigate to the explainer screen
+                                    navController.navigate("explain/$owner/$repo/${filePath.replace("/", "_")}")
+                                },
+                                onBack = { navController.popBackStack() }
+                            )
+                        }
+
+                        composable(
+                            "explain/{owner}/{repo}/{path}",
+                            arguments = listOf(
+                                navArgument("owner") { type = NavType.StringType },
+                                navArgument("repo") { type = NavType.StringType },
+                                navArgument("path") { type = NavType.StringType }
+                            )
+                        ) { backStackEntry ->
+                            val owner = backStackEntry.arguments?.getString("owner") ?: ""
+                            val repo = backStackEntry.arguments?.getString("repo") ?: ""
+                            val path = backStackEntry.arguments?.getString("path") ?: ""
+                            // Decode the path (replace "_" with "/" – we used replace to avoid URL issues)
+                            val decodedPath = path.replace("_", "/")
+                            FileExplainerScreen(
+                                owner = owner,
+                                repo = repo,
+                                path = decodedPath,
                                 onBack = { navController.popBackStack() }
                             )
                         }

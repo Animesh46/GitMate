@@ -9,4 +9,19 @@ interface GitHubApi {
 
     @GET("users/{username}/repos")
     suspend fun getUserRepos(@Path("username") username: String): List<GitHubRepo>
+
+    @GET("repos/{owner}/{repo}/contents/{path}")
+    suspend fun getRepoContents(
+        @Path("owner") owner: String,
+        @Path("repo") repo: String,
+        @Path("path") path: String = ""
+    ): List<GitHubContentItem>
+
+    @GET("repos/{owner}/{repo}/contents/{path}")
+    suspend fun getFileContent(
+        @Path("owner") owner: String,
+        @Path("repo") repo: String,
+        @Path("path") path: String
+    ): GitHubFileContent
 }
+

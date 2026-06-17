@@ -17,6 +17,7 @@ import com.animesh.gitmate.di.RetrofitClient
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import androidx.compose.foundation.clickable
 
 class DetailViewModel(private val username: String) : ViewModel() {
     private val api = RetrofitClient.api
@@ -63,6 +64,7 @@ class DetailViewModelFactory(private val username: String) : androidx.lifecycle.
 @Composable
 fun DetailScreen(
     username: String,
+    onRepoClick: (String) -> Unit,   // <-- ADD THIS
     onBack: () -> Unit,
     viewModel: DetailViewModel = viewModel(factory = DetailViewModelFactory(username))
 ) {
@@ -109,6 +111,7 @@ fun DetailScreen(
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(vertical = 4.dp)
+                            .clickable { onRepoClick(repo.name) }   // <-- ADD THIS LINE
                     ) {
                         Column(modifier = Modifier.padding(12.dp)) {
                             Text(repo.name, style = MaterialTheme.typography.titleSmall)
