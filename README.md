@@ -46,14 +46,20 @@ GitMate is a modern Android app that lets you browse GitHub repositories and **u
 5. **Run** the app on an emulator or physical device.
 
 ## Screenshots
-
-| Login | Home / Search | File Browser | AI Explainer |
-|-------|---------------|--------------|--------------|
-| ![Login](<img width="300"  alt="image" src="https://github.com/user-attachments/assets/124c55df-3cd0-4bb1-97ff-891cc8b4714e" />
-) | ![Home](<img width="300" alt="image" src="https://github.com/user-attachments/assets/ef53b931-934e-45f6-868e-fdb11d981cf7" />
-) | ![Browser](<img width="300" alt="image" src="https://github.com/user-attachments/assets/86270fea-fa0c-487d-9032-eb7449cb7324" />
-) | ![Explainer](<img width="300" alt="image" src="https://github.com/user-attachments/assets/658f8d32-9fae-43a1-8522-f0ba00f95fbe" />
-) |
+<table>
+  <tr>
+    <td><strong>Login</strong></td>
+    <td><strong>Home / Search</strong></td>
+    <td><strong>File Browser</strong></td>
+    <td><strong>AI Explainer</strong></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/124c55df-3cd0-4bb1-97ff-891cc8b4714e" width="200" /></td>
+    <td><img src="https://github.com/user-attachments/assets/ef53b931-934e-45f6-868e-fdb11d981cf7" width="200" /></td>
+    <td><img src="https://github.com/user-attachments/assets/86270fea-fa0c-487d-9032-eb7449cb7324" width="200" /></td>
+    <td><img src="https://github.com/user-attachments/assets/658f8d32-9fae-43a1-8522-f0ba00f95fbe" width="200" /></td>
+  </tr>
+</table>
 
 
 ## Demo Video
