@@ -1,47 +1,72 @@
-# GitMate
+# GitMate - AI-Powered GitHub Code Explorer
 
-GitMate is an Android app that lets you search for GitHub users, view their profiles, and browse their public repositories. Built as a technical recruitment project for the Android Club.
+GitMate is a modern Android app that lets you browse GitHub repositories and **understand any code file** using AI. Built for the Android Club Technical Recruitment 2026.
 
 ## Features
-- 🔐 Firebase Email/Password Authentication (Login & Register)
-- 🔍 Search any GitHub user by username
-- 👤 View user profile (avatar, bio, followers, following)
-- 📁 Browse public repositories with language and star count
-- 📱 Clean and modern UI built with Jetpack Compose
-- 🧩 MVVM architecture with Coroutines and StateFlow
+
+- 🔐 **Firebase Authentication** – Email/Password login and registration
+- 🔍 **GitHub User Search** – Find any GitHub user instantly
+- 👤 **Profile & Repos** – View user bios, followers, and public repositories
+- 📁 **Repo File Browser** – Browse the complete file tree of any public repository
+- 🧠 **AI Code Explainer** – Tap any file and get an instant, beginner-friendly explanation powered by DeepSeek V4 Pro (NVIDIA NIM)
+- 📱 **Modern UI** – Built entirely with Jetpack Compose (Material 3)
+- 🏗️ **Clean Architecture** – MVVM with StateFlow and Coroutines
 
 ## Tech Stack
+
 - **Language:** Kotlin
-- **UI:** Jetpack Compose (Material 3)
-- **Architecture:** MVVM
+- **UI Toolkit:** Jetpack Compose (Material 3)
+- **Architecture:** MVVM (Model-View-ViewModel)
 - **Authentication:** Firebase Auth
-- **Networking:** Retrofit2 + Gson (GitHub REST API)
+- **Networking:** Retrofit2 + OkHttp (GitHub REST API)
+- **AI Backend:** NVIDIA NIM (DeepSeek V4 Pro)
+- **Asynchronous:** Kotlin Coroutines + StateFlow
 - **Image Loading:** Coil
-- **Asynchronous:** Coroutines + Flow
 
 ## Setup Instructions
-1. Clone the repository
-2. Add your `google-services.json` file to the `app/` folder (get it from Firebase Console)
-3. Open the project in Android Studio
-4. Sync Gradle and run on emulator/device
+
+1. **Clone the repository**:
+   ```
+   git clone https://github.com/Animesh46/GitMate.git
+   ```
+
+2. **Add your `google-services.json`**:
+   - Download it from your Firebase Console and place it in the `app/` folder.
+
+3. **Add your NVIDIA API Key**:
+   - Create a free account at [build.nvidia.com](https://build.nvidia.com).
+   - Generate an API key.
+   - Open `local.properties` and add:
+     ```
+     NVIDIA_API_KEY=your_key_here
+     ```
+
+4. **Open in Android Studio** and sync Gradle.
+
+5. **Run** the app on an emulator or physical device.
 
 ## Screenshots
-<img width="323" height="700" alt="Screenshot 2026-06-16 193026" src="https://github.com/user-attachments/assets/8df7f6ea-106d-44ec-af13-ecc180f44e0d" />
-<img width="371" height="708" alt="Screenshot 2026-06-16 193009" src="https://github.com/user-attachments/assets/3daac914-3508-4f0a-8c3c-2753495bc6c3" />
-<img width="357" height="717" alt="Screenshot 2026-06-16 192911" src="https://github.com/user-attachments/assets/6c937f51-3540-4da1-8248-7408318a414b" />
-<img width="335" height="697" alt="Screenshot 2026-06-16 193057" src="https://github.com/user-attachments/assets/2600317a-09d8-4cbb-b9d3-57804478cf1d" />
-<img width="328" height="700" alt="Screenshot 2026-06-16 193042" src="https://github.com/user-attachments/assets/21f11f6d-3638-41f4-8e52-2d79f22eec52" />
 
+| Login | Home / Search | File Browser | AI Explainer |
+|-------|---------------|--------------|--------------|
+| ![Login](login.jpg) | ![Home](home.jpg) | ![Browser](browser.jpg) | ![Explainer](explainer.jpg) |
+
+*Replace the filenames (login.jpg, home.jpg, etc.) with your actual screenshot filenames.*
 
 ## Demo Video
-<img width="300" alt="GitMateDemo" src="https://github.com/user-attachments/assets/40a43623-63c5-4546-a01d-8f6f3f06613b" />
 
-## APK
-Download the APK from the [Releases](https://github.com/Animesh46/GitMate/releases) section.
+Watch the demo: [GitMate Demo](GitMateDemo.gif)
+
+
+## Download APK
+
+Download the latest release APK from the [Releases](https://github.com/Animesh46/GitMate/releases) section.
 
 ## What I Learned
-- How to integrate Firebase Authentication
-- How to consume REST APIs with Retrofit
-- How to manage UI state with Compose + StateFlow
-- How to handle navigation in a single-activity app
-- How to use Room for local persistence (future feature)
+
+- Integrating Firebase Authentication with Jetpack Compose
+- Consuming REST APIs with Retrofit and handling JSON responses
+- Managing UI state with `StateFlow` and background threads with Coroutines
+- Navigating between composable screens using Jetpack Navigation
+- Integrating third-party AI APIs (NVIDIA NIM) for real-time code analysis
+- Solving network security and timeout issues
