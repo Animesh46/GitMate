@@ -17,7 +17,7 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         //val apiKey: String = project.properties["DEEPSEEK_API_KEY"] as? String ?: ""
-        val nvidiaApiKey = "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"
+        val nvidiaApiKey = NVIDIA_API_KEY
         buildConfigField("String", "NVIDIA_API_KEY", "\"$nvidiaApiKey\"")
     }
 
